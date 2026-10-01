@@ -52,14 +52,6 @@ The paper compares TF-PRVR with training-based approaches on **ActivityNet Capti
   <a href="assets/main-results.png"><img src="assets/main-results.png" width="100%" alt="Paper Table 6: in-domain training-based and training-free retrieval results on ActivityNet Captions, Charades-STA, and TVR"></a>
 </p>
 
-### What contributes to retrieval quality?
-
-The ablations on ActivityNet Captions examine the frozen backbone, hierarchical segmentation, graph propagation, moment-aware scoring, and temporal signal design.
-
-<p align="center">
-  <a href="assets/ablations.png"><img src="assets/ablations.png" width="100%" alt="Paper Table 7: backbone, module, and temporal signal ablations on ActivityNet Captions"></a>
-</p>
-
 ## Quick start
 
 ### 1. Install
