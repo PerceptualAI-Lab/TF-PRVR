@@ -1,8 +1,8 @@
 <h1 align="center">[NeurIPS 2026] TF-PRVR: Training-Free Partially Relevant Video Retrieval for Real-World Generalization</h1>
 
 <p align="center">
-  <a href="https://sites.google.com/view/pai-lab/home?authuser=0">Giyeol Kim</a> &nbsp;
-  <a href="https://sites.google.com/view/pai-lab/members/faculty?authuser=0">Chanho Eom</a><sup>&dagger;</sup>
+  <a href="https://giyeolkim.github.io/">Giyeol Kim</a> &nbsp;
+  <a href="https://sites.google.com/view/pai-lab/members_1/faculty?authuser=0">Chanho Eom</a><sup>&dagger;</sup>
   <br>
   GSAIM, Chung-Ang University
   <br>
