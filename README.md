@@ -70,7 +70,7 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-Python 3.10 or newer is required. The feature-level retrieval pipeline runs on CPU with NumPy, SciPy, PyWavelets, and h5py. The requirements also include PyTorch, torchvision, and common PRVR research utilities.
+Python 3.10 or newer is required. The feature-level retrieval pipeline runs on CPU with NumPy, SciPy, PyWavelets, and h5py.
 
 ### 2. Prepare pre-extracted features
 
