@@ -74,7 +74,7 @@ Python 3.10 or newer is required. The feature-level retrieval pipeline runs on C
 
 ### 2. Prepare pre-extracted features
 
-This release provides the core feature-level retrieval pipeline. Supply features extracted by a frozen image–text encoder pair, such as **EVA-CLIP-L/14**. Feature extraction scripts, pretrained feature files, and benchmark-specific configurations are not bundled.
+This release provides the core feature-level retrieval pipeline. Supply features extracted by a frozen image–text encoder pair, such as **EVA-CLIP-L/14**.
 
 | File | HDF5 dataset key | Array shape | Content |
 | :--- | :--- | :--- | :--- |
