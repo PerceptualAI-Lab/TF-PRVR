@@ -3,11 +3,17 @@
 <p align="center">
   <a href="https://giyeolkim.github.io/">Giyeol Kim</a> &nbsp;
   <a href="https://sites.google.com/view/pai-lab/members_1/faculty?authuser=0">Chanho Eom</a><sup>&dagger;</sup>
-  <br>
+</p>
+
+<p align="center">
   <a href="https://sites.google.com/view/pai-lab/home?authuser=0">Perceptual AI Lab</a>, GSAIM, Chung-Ang University
-  <br>
+</p>
+
+<p align="center">
   <sup>&dagger;</sup>Corresponding author
-  <br>
+</p>
+
+<p align="center">
   <a>Project Page</a> &nbsp;|&nbsp; <a>Paper (NeurIPS)</a> &nbsp;|&nbsp; <a>arXiv</a>
 </p>
 
