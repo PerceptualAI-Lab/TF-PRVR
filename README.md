@@ -1,10 +1,10 @@
 <h1 align="center">[NeurIPS 2026] TF-PRVR: Training-Free Partially Relevant Video Retrieval for Real-World Generalization</h1>
 
 <p align="center">
-  <a href="https://sites.google.com/view/pai-lab/home?authuser=0">Giyeol Kim</a><sup>1</sup> &nbsp;
-  <a href="https://sites.google.com/view/pai-lab/members/faculty?authuser=0">Chanho Eom</a><sup>&dagger; 1</sup>
+  <a href="https://sites.google.com/view/pai-lab/home?authuser=0">Giyeol Kim</a> &nbsp;
+  <a href="https://sites.google.com/view/pai-lab/members/faculty?authuser=0">Chanho Eom</a><sup>&dagger;</sup>
   <br>
-  <sup>1</sup>GSAIM, Chung-Ang University
+  GSAIM, Chung-Ang University
   <br>
   <sup>&dagger;</sup>Corresponding author
   <br>
@@ -100,8 +100,6 @@ python main.py index \
   --index outputs/index.h5
 ```
 
-Video segmentation, graph propagation, and temporal consensus are precomputed once per video. Defaults are `--wavelet db4` and `--beta 0.7`.
-
 ### 4. Retrieve and evaluate
 
 ```bash
@@ -126,3 +124,5 @@ Omit `--annotations` for retrieval only. Rankings are saved as JSONL, and evalua
 | [`requirements.txt`](requirements.txt) | Runtime and research-environment dependencies |
 
 ## Citation
+
+Citation information will be available soon.
