@@ -38,8 +38,6 @@ Partially relevant video retrieval asks whether a video contains a moment matchi
 
 ## Results
 
-Results in this section are reported in the paper. **SumR** is the sum of R@1, R@5, R@10, and R@100, with recalls expressed as percentages.
-
 ### Generality across frozen backbones
 
 TF-PRVR improves over the corresponding zero-shot baseline across all three evaluated backbones on **ActivityNet Captions** (Table 7a).
@@ -52,7 +50,7 @@ TF-PRVR improves over the corresponding zero-shot baseline across all three eval
 
 ### Benchmark comparison
 
-The paper compares TF-PRVR with training-based approaches on **ActivityNet Captions**, **Charades-STA**, and **TVR**. Training-based methods below are evaluated in-domain; TF-PRVR uses no PRVR-specific training.
+TF-PRVR is evaluated alongside training-based approaches on **ActivityNet Captions**, **Charades-STA**, and **TVR** without PRVR-specific training. The training-based methods are evaluated in-domain.
 
 <p align="center">
   <a href="assets/main-results.png"><img src="assets/main-results.png" width="100%" alt="Paper Table 6: in-domain training-based and training-free retrieval results on ActivityNet Captions, Charades-STA, and TVR"></a>
