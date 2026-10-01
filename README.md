@@ -4,7 +4,7 @@
   <a href="https://giyeolkim.github.io/">Giyeol Kim</a> &nbsp;
   <a href="https://sites.google.com/view/pai-lab/members_1/faculty?authuser=0">Chanho Eom</a><sup>&dagger;</sup>
   <br>
-  GSAIM, Chung-Ang University
+  <a href="https://sites.google.com/view/pai-lab/home?authuser=0">Perceptual AI Lab</a>, GSAIM, Chung-Ang University
   <br>
   <sup>&dagger;</sup>Corresponding author
   <br>
