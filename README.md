@@ -1,22 +1,15 @@
-<div align="center">
+<h1 align="center">[NeurIPS 2026] TF-PRVR: Training-Free Partially Relevant Video Retrieval for Real-World Generalization</h1>
 
-# TF-PRVR
-
-### Training-Free Partially Relevant Video Retrieval<br>for Real-World Generalization
-
-**Giyeol Kim · Chanho Eom**<br>
-Chung-Ang University
-
-<img src="https://img.shields.io/badge/NeurIPS-2026-6654E8?style=flat-square" alt="Accepted to NeurIPS 2026">
-<img src="https://img.shields.io/badge/Official-Implementation-167D8D?style=flat-square" alt="Official implementation">
-<img src="https://img.shields.io/badge/PRVR-Training--Free-397B50?style=flat-square" alt="Training-free PRVR">
-<img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square" alt="Python 3.10 or newer">
-
-**Accepted to NeurIPS 2026**
-
-[Overview](#overview) · [Results](#results) · [Quick start](#quick-start) · [Implementation](#implementation) · [Citation](#citation)
-
-</div>
+<p align="center">
+  <a href="https://sites.google.com/view/pai-lab/home?authuser=0">Giyeol Kim</a><sup>1</sup> &nbsp;
+  <a href="https://sites.google.com/view/pai-lab/members/faculty?authuser=0">Chanho Eom</a><sup>&dagger; 1</sup>
+  <br>
+  <sup>1</sup>GSAIM, Chung-Ang University
+  <br>
+  <sup>&dagger;</sup>Corresponding author
+  <br>
+  <a>Project Page</a> &nbsp;|&nbsp; <a>Paper (NeurIPS)</a> &nbsp;|&nbsp; <a>arXiv</a>
+</p>
 
 ---
 
@@ -30,7 +23,6 @@ Partially relevant video retrieval asks whether a video contains a moment matchi
 <p align="center">
   <a href="assets/framework.png"><img src="assets/framework.png" width="100%" alt="TF-PRVR framework: frozen features, wavelet-based hierarchical segmentation, multi-scale graph propagation, and moment-aware scoring"></a>
 </p>
-<p align="center"><em>Framework overview from Figure 4. Click any figure or table to view the full-resolution image.</em></p>
 
 1. **Video-specific hierarchical segmentation.** Changes in the direction of frame-feature evolution form a temporal semantic signal. Wavelet detail responses identify boundaries at multiple scales, yielding segments with coherent visual semantics.
 2. **Graph-based relevance propagation.** A query-independent graph links segments through within-scale semantic similarity and temporal proximity, and through temporal overlap across adjacent scales.
@@ -165,19 +157,3 @@ This is algebraically equivalent to explicit query relevance propagation followe
 </details>
 
 ## Citation
-
-If you find this work useful, please cite:
-
-```bibtex
-@inproceedings{kim2026tfprvr,
-  title     = {{TF-PRVR}: Training-Free Partially Relevant Video Retrieval for Real-World Generalization},
-  author    = {Kim, Giyeol and Eom, Chanho},
-  booktitle = {Advances in Neural Information Processing Systems},
-  year      = {2026},
-  url       = {https://github.com/PerceptualAI-Lab/TF-PRVR}
-}
-```
-
-## Acknowledgements
-
-We thank the authors of MSC-PRVR and prior PRVR methods for their publicly available implementations, which informed the data-loading and evaluation conventions used in this repository.
