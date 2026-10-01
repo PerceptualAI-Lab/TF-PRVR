@@ -125,35 +125,4 @@ Omit `--annotations` for retrieval only. Rankings are saved as JSONL, and evalua
 | [`main.py`](main.py) | Offline indexing and batched retrieval/evaluation |
 | [`requirements.txt`](requirements.txt) | Runtime and research-environment dependencies |
 
-### Offline computation, efficient online scoring
-
-Let $H$ contain the normalized segment features and $W_{\mathrm{norm}}$ be the symmetrically normalized graph. Relevance propagation is
-
-$$
-K=(1-\beta)(I-\beta W_{\mathrm{norm}})^{-1}, \qquad r^*=KH\hat{q}.
-$$
-
-Let $A$ average the covering segments across scales for each temporal interval. The implementation caches $Z=AKH$ and computes
-
-$$
-S(v,q)=\max_{\tau}(Z\hat{q})_{\tau}.
-$$
-
-This is algebraically equivalent to explicit query relevance propagation followed by moment-aware scoring. It avoids storing a dense propagation kernel for every video. Cached features are not normalized again, and negative query similarities are retained.
-
-<details>
-<summary><strong>Segmentation, graph, and numerical conventions</strong></summary>
-
-- Frame features are normalized before temporal differencing and segment averaging. Consecutive stationary steps produce zero temporal change. Near-zero pooled features remain zero.
-- Each db4 detail component is reconstructed with symmetric extension. Local maxima above the absolute response mean plus standard deviation define boundaries. A response peak at zero-based index `i` splits before frame `i + 2`.
-- Decomposition depth uses the signal length and wavelet filter length. Short sequences use one whole-video segment; scales without detected peaks also retain one whole-video segment.
-- Within-scale edges sum positive cosine similarity and exponential temporal proximity. The temporal scale is the mean segment duration at that level.
-- Adjacent-scale edges multiply temporal IoU by positive cosine similarity and are inserted in both directions. One unit self-loop per node precedes symmetric degree normalization.
-- A positive-definite linear solve implements propagation with `beta=0.7`. No iterative convergence threshold is needed.
-- Consensus is evaluated on every interval between the union of segment boundaries. Half-open spans `[start, end)` give a unique covering segment per scale and preserve short intervals.
-- Preprocessing uses dense graphs and linear solves; time and memory depend on the number of detected segments. Retrieval batches queries and loads one video's cached features at a time.
-- The cache format is `tf-prvr-v2`; older indices must be rebuilt with `index`.
-
-</details>
-
 ## Citation
