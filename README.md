@@ -1,4 +1,4 @@
-<h1 align="center">[NeurIPS 2026] TF-PRVR: Training-Free Partially Relevant Video Retrieval for Real-World Generalization</h1>
+<h1 align="center">[NeurIPS 2026] TF-PRVR: Training-Free Partially Relevant Video Retrieval</h1>
 
 <p align="center">
   <a href="https://giyeolkim.github.io/">Giyeol Kim</a> &nbsp;
