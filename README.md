@@ -19,16 +19,14 @@
 </p>
 
 <p align="center">
-  <a href="https://perceptualai-lab.github.io/TF-PRVR/"><img src="https://img.shields.io/badge/Project_Page-2563EB?style=for-the-badge" alt="Project Page"></a>
+  <a href="https://perceptualai-lab.github.io/TF-PRVR/"><img src="assets/links/project-page.svg" height="36" alt="Project Page"></a>
   &nbsp;
-  <a href="https://perceptualai-lab.github.io/TF-PRVR/#demo"><img src="https://img.shields.io/badge/Demo-0891B2?style=for-the-badge" alt="Demo"></a>
+  <a href="https://perceptualai-lab.github.io/TF-PRVR/#demo"><img src="assets/links/demo.svg" height="36" alt="Demo"></a>
   &nbsp;
-  <img src="https://img.shields.io/badge/Paper-Coming_Soon-64748B?style=for-the-badge" alt="Paper coming soon">
+  <img src="assets/links/paper.svg" height="36" alt="Paper coming soon">
   &nbsp;
-  <img src="https://img.shields.io/badge/arXiv-Coming_Soon-64748B?style=for-the-badge" alt="arXiv coming soon">
+  <img src="assets/links/arxiv.svg" height="36" alt="arXiv coming soon">
 </p>
-
-<p align="center"><b>Find the relevant moment. Retrieve the whole video.</b></p>
 
 <p align="center">
   TF-PRVR retrieves untrimmed videos from natural-language queries using frozen vision-language features, adaptive temporal segments, and multi-scale relevance propagation&mdash;without task-specific training.
