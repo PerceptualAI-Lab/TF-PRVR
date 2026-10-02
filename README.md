@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <a>Project Page</a> &nbsp;|&nbsp; <a>Paper (NeurIPS)</a> &nbsp;|&nbsp; <a>arXiv</a>
+  <a href="https://perceptualai-lab.github.io/TF-PRVR/">Project Page</a> &nbsp;|&nbsp; <a>Paper (NeurIPS)</a> &nbsp;|&nbsp; <a>arXiv</a>
 </p>
 
 ---
