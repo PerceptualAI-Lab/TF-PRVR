@@ -15,6 +15,8 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css?v=2">
   <script src="app.js" defer></script>
+  <link rel="stylesheet" href="demo.css?v=1">
+  <script src="demo.js?v=1" defer></script>
   <title>TF-PRVR | NeurIPS 2026</title>
 </head>
 <body>
@@ -29,6 +31,7 @@
       <span class="resource unavailable" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6Z M14 3v5h4 M9 12h6 M9 16h6"/></svg>Paper <small>Coming soon</small></span>
       <span class="resource unavailable" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 3 12 18M8 21l8-18"/></svg>arXiv <small>Coming soon</small></span>
       <a class="resource" href="https://github.com/PerceptualAI-Lab/TF-PRVR"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18"/></svg>Code</a>
+      <a class="resource" href="#demo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 12 8-12 8Z"/></svg>Demo</a>
     </div>
   </header>
 
@@ -63,6 +66,47 @@
         <div><h3>Multi-scale propagation</h3><p>Temporal and semantic relationships connect segments within and across scales, allowing relevant evidence to reinforce one another.</p></div>
         <div><h3>Moment-aware scoring</h3><p>Temporally aligned relevance is averaged across scales. The strongest consensus determines the video score.</p></div>
       </div>
+    </section>
+
+    <section class="section container demo-section" id="demo" aria-labelledby="demo-title">
+      <h2 id="demo-title">TF-PRVR in Action</h2>
+      <p class="section-intro">A query describes a moment. Retrieval returns the video.<br> Follow how evidence comes together across temporal scales.</p>
+      <div class="retrieval-demo" data-stage="0">
+        <div class="demo-toolbar"><span class="demo-label">Illustrative demo</span><div class="demo-controls"><button type="button" id="demo-play">Play walkthrough</button><button type="button" id="demo-reset" aria-label="Reset demo">↺ Reset</button></div></div>
+        <div class="demo-query-picker" role="group" aria-label="Example text queries"><button type="button" data-query="0" aria-pressed="true">Pouring water</button><button type="button" data-query="1" aria-pressed="false">Cutting vegetables</button><button type="button" data-query="2" aria-pressed="false">Washing dishes</button></div>
+        <p class="demo-query"><span>TEXT QUERY</span><q id="demo-query-text">Water is being poured into a glass.</q></p>
+        <div class="demo-stages" role="group" aria-label="Walkthrough stages"><button type="button" data-stage-button="0" aria-pressed="true"><span>1</span> Segmentation</button><button type="button" data-stage-button="1" aria-pressed="false"><span>2</span> Propagation</button><button type="button" data-stage-button="2" aria-pressed="false"><span>3</span> Consensus</button><button type="button" data-stage-button="3" aria-pressed="false"><span>4</span> Retrieval</button></div>
+        <div class="demo-progress" role="progressbar" aria-label="Walkthrough progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+        <div class="demo-videos">
+          <article class="demo-video" data-video="0">
+            <div class="demo-video-heading"><h3>Video 01</h3><span class="demo-match">Illustrative match</span></div>
+            <div class="demo-player"><video muted playsinline controls preload="none" poster="assets/demo/video-1.jpg" aria-label="Video 01: edited everyday activities"><source src="assets/demo/video-1.mp4" type="video/mp4"></video><span class="demo-media-error" hidden>Video unavailable. Please reload to try again.</span></div>
+            <div class="demo-filmstrip"><img src="assets/demo/strip-1.jpg" width="960" height="90" loading="lazy" alt="Six chronological frames from video 01"><span class="demo-interval" aria-hidden="true"></span><span class="demo-playhead" aria-hidden="true"></span></div>
+            <div class="demo-axis" aria-hidden="true"><span>0 s</span><span>18 s</span></div>
+            <svg class="demo-graph" viewBox="0 0 300 130" role="img" aria-label="Illustrative multi-scale segmentation and graph connections for video 01"></svg>
+            <div class="demo-consensus"><span>Temporal consensus</span><svg viewBox="0 0 300 58" role="img" aria-label="Illustrative temporal consensus for video 01"></svg></div>
+          </article>
+          <article class="demo-video" data-video="1">
+            <div class="demo-video-heading"><h3>Video 02</h3><span class="demo-match">Illustrative match</span></div>
+            <div class="demo-player"><video muted playsinline controls preload="none" poster="assets/demo/video-2.jpg" aria-label="Video 02: edited everyday activities"><source src="assets/demo/video-2.mp4" type="video/mp4"></video><span class="demo-media-error" hidden>Video unavailable. Please reload to try again.</span></div>
+            <div class="demo-filmstrip"><img src="assets/demo/strip-2.jpg" width="960" height="90" loading="lazy" alt="Six chronological frames from video 02"><span class="demo-interval" aria-hidden="true"></span><span class="demo-playhead" aria-hidden="true"></span></div>
+            <div class="demo-axis" aria-hidden="true"><span>0 s</span><span>18 s</span></div>
+            <svg class="demo-graph" viewBox="0 0 300 130" role="img" aria-label="Illustrative multi-scale segmentation and graph connections for video 02"></svg>
+            <div class="demo-consensus"><span>Temporal consensus</span><svg viewBox="0 0 300 58" role="img" aria-label="Illustrative temporal consensus for video 02"></svg></div>
+          </article>
+          <article class="demo-video" data-video="2">
+            <div class="demo-video-heading"><h3>Video 03</h3><span class="demo-match">Illustrative match</span></div>
+            <div class="demo-player"><video muted playsinline controls preload="none" poster="assets/demo/video-3.jpg" aria-label="Video 03: edited everyday activities"><source src="assets/demo/video-3.mp4" type="video/mp4"></video><span class="demo-media-error" hidden>Video unavailable. Please reload to try again.</span></div>
+            <div class="demo-filmstrip"><img src="assets/demo/strip-3.jpg" width="960" height="90" loading="lazy" alt="Six chronological frames from video 03"><span class="demo-interval" aria-hidden="true"></span><span class="demo-playhead" aria-hidden="true"></span></div>
+            <div class="demo-axis" aria-hidden="true"><span>0 s</span><span>18 s</span></div>
+            <svg class="demo-graph" viewBox="0 0 300 130" role="img" aria-label="Illustrative multi-scale segmentation and graph connections for video 03"></svg>
+            <div class="demo-consensus"><span>Temporal consensus</span><svg viewBox="0 0 300 58" role="img" aria-label="Illustrative temporal consensus for video 03"></svg></div>
+          </article>
+        </div>
+        <p class="demo-explanation" id="demo-explanation" role="status" aria-live="polite">Split each video into segments at multiple temporal scales.</p>
+        <p class="demo-note">Edited public footage. Segments, connections, curves, and selections are scripted illustrations, not model predictions.</p>
+      </div>
+      <details class="demo-credits"><summary>Video sources</summary><p>Edited from <a href="https://www.pexels.com/video/pouring-water-on-a-glass-cup-8816380/">TP Motion</a>, <a href="https://www.pexels.com/video/cutting-vegetables-to-pieces-in-a-chopping-board-3209214/">Pressmaster</a>, and <a href="https://www.pexels.com/video/a-woman-washing-the-dishes-7641383/">MART PRODUCTION</a> on Pexels. Used under the <a href="https://www.pexels.com/license/">Pexels License</a>. Each example combines different clips into an 18-second montage.</p></details>
     </section>
 
     <section class="section container" id="results">
