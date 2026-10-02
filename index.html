@@ -1,10 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TF-PRVR</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="TF-PRVR: Training-Free Partially Relevant Video Retrieval for Real-World Generalization. NeurIPS 2026. Giyeol Kim and Chanho Eom, Chung-Ang University.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TF-PRVR | NeurIPS 2026">
+  <meta property="og:description" content="Training-Free Partially Relevant Video Retrieval for Real-World Generalization">
+  <meta property="og:url" content="https://perceptualai-lab.github.io/TF-PRVR/">
+  <meta property="og:image" content="https://perceptualai-lab.github.io/TF-PRVR/assets/teaser.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://perceptualai-lab.github.io/TF-PRVR/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+  <title>TF-PRVR | NeurIPS 2026</title>
 </head>
 <body>
+  <a class="skip-link" href="#abstract">Skip to content</a>
+  <header class="publication-header" id="top">
+    <h1><span class="method-name">TF-PRVR</span>: Training-Free Partially Relevant<br class="title-break"> Video Retrieval for Real-World Generalization</h1>
+    <p class="venue">NeurIPS 2026</p>
+    <div class="authors"><a href="https://giyeolkim.github.io/">Giyeol Kim</a><a href="https://sites.google.com/view/pai-lab/members_1/faculty?authuser=0">Chanho Eom<sup>†</sup></a></div>
+    <p class="affiliation"><a href="https://sites.google.com/view/pai-lab/home?authuser=0">Perceptual AI Lab</a>, GSAIM, Chung-Ang University</p>
+    <p class="author-note"><sup>†</sup>Corresponding author</p>
+    <div class="publication-links" aria-label="Publication resources">
+      <span class="resource unavailable" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6Z M14 3v5h4 M9 12h6 M9 16h6"/></svg>Paper <small>Coming soon</small></span>
+      <span class="resource unavailable" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 3 12 18M8 21l8-18"/></svg>arXiv <small>Coming soon</small></span>
+      <a class="resource" href="https://github.com/PerceptualAI-Lab/TF-PRVR"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18"/></svg>Code</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="teaser container" aria-label="Research overview">
+      <figure>
+        <button class="figure-button" type="button" data-image="assets/teaser.png" data-caption="Motivation and cross-domain evaluation · Figure 1" aria-label="Enlarge overview figure"><img src="assets/teaser.png" width="2394" height="924" alt="Figure 1: existing dual-branch PRVR framework, semantic dilution from fixed clips, and cross-domain R@1 comparisons on ActivityNet Captions, Charades-STA, and TVR"></button>
+        <figcaption><strong>TF-PRVR retrieves partially relevant videos without task-specific training.</strong><br> Adaptive temporal structure and multi-scale consensus preserve the generalization of frozen vision-language models.</figcaption>
+      </figure>
+    </section>
+
+    <section class="abstract-section" id="abstract">
+      <div class="container prose">
+        <h2>Abstract</h2>
+        <p>Partially Relevant Video Retrieval (PRVR) aims to retrieve untrimmed videos containing moments relevant to a given text query. Despite recent progress, existing PRVR methods suffer from two key limitations: a fixed video decomposition scheme that causes semantic dilution, and source-domain overfitting induced by task-specific training. In this paper, we propose <strong>TF-PRVR</strong>, the first training-free framework for PRVR. TF-PRVR leverages frozen vision-language features to construct video-specific hierarchical representations. It derives temporal semantic signals from frame-level features and applies frequency-based multi-scale analysis to identify adaptive temporal boundaries, producing hierarchical segments with coherent event-level semantics. Built on these segments, TF-PRVR constructs a unified multi-scale graph and propagates query relevance across temporally and semantically related nodes. A moment-aware scoring strategy then aggregates temporally aligned relevance across scales, emphasizing consistently supported moments while suppressing isolated false responses. Without task-specific training, TF-PRVR preserves the general-purpose alignment capability of pre-trained vision-language models and avoids dataset-specific overfitting. Extensive experiments demonstrate consistent performance across datasets with diverse visual and temporal characteristics, suggesting a practical direction for training-free PRVR.</p>
+      </div>
+    </section>
+
+    <section class="section container" id="method">
+      <h2>Method Overview</h2>
+      <p class="section-intro">From frozen frame features to video-specific temporal structure.<br>TF-PRVR combines adaptive segmentation, graph propagation, and moment-aware scoring.</p>
+      <figure>
+        <button class="figure-button" type="button" data-image="assets/framework.png" data-caption="TF-PRVR framework · Figure 4" aria-label="Enlarge framework figure"><img src="assets/framework.png" width="2424" height="1014" loading="lazy" alt="TF-PRVR pipeline: semantic change signals, hierarchical temporal segmentation, multi-scale graph construction, relevance propagation, and moment-aware scoring"></button>
+        <figcaption><strong>Framework overview.</strong> A unified graph connects hierarchical video segments. Query relevance is propagated across related segments, then aggregated over temporally aligned scales to compute a video-level retrieval score.</figcaption>
+      </figure>
+      <div class="method-steps">
+        <div><h3>Adaptive segmentation</h3><p>Frequency-based analysis of semantic change identifies video-specific boundaries at multiple temporal scales.</p></div>
+        <div><h3>Multi-scale propagation</h3><p>Temporal and semantic relationships connect segments within and across scales, allowing relevant evidence to reinforce one another.</p></div>
+        <div><h3>Moment-aware scoring</h3><p>Temporally aligned relevance is averaged across scales. The strongest consensus determines the video score.</p></div>
+      </div>
+    </section>
+
+    <section class="section container" id="results">
+      <h2>Experimental Results</h2>
+      <p class="section-intro">TF-PRVR is evaluated on <strong>ActivityNet Captions</strong>, <strong>Charades-STA</strong>, and <strong>TVR</strong>.<br>It improves over zero-shot retrieval without PRVR-specific training.</p>
+      <figure>
+        <button class="figure-button" type="button" data-image="assets/main-results.png" data-caption="Benchmark comparison · Table 6" aria-label="Enlarge benchmark results"><img src="assets/main-results.png" width="2424" height="1324" loading="lazy" alt="Table 6: recall and SumR comparison of TF-PRVR with training-based and training-free approaches across three PRVR benchmarks"></button>
+        <figcaption><strong>Comparison with existing PRVR methods.</strong> Training-based approaches are evaluated in-domain. TF-PRVR uses frozen features and requires no PRVR-specific training.</figcaption>
+      </figure>
+      <h3 class="subheading">Generalization across vision-language backbones</h3>
+      <p class="table-intro">TF-PRVR consistently improves retrieval with CLIP, SigLIP, and EVA-CLIP features.</p>
+      <div class="table-wrap" role="region" aria-label="Backbone comparison" tabindex="0">
+        <table>
+          <caption>ActivityNet Captions · SumR ↑</caption>
+          <thead><tr><th scope="col">Backbone</th><th scope="col">Zero-shot</th><th scope="col">TF-PRVR</th><th scope="col">Improvement</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">CLIP-L/14</th><td>172.9</td><td><strong>193.9</strong></td><td class="gain">+21.0</td></tr>
+            <tr><th scope="row">SigLIP-L/14</th><td>178.7</td><td><strong>198.5</strong></td><td class="gain">+19.8</td></tr>
+            <tr><th scope="row">EVA-CLIP-L/14</th><td>180.4</td><td><strong>200.8</strong></td><td class="gain">+20.4</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section container" id="qualitative">
+      <h2>Qualitative Results</h2>
+      <p class="section-intro">A video contains events of different durations.<br>Adaptive hierarchical segments provide the appropriate context for different queries.</p>
+      <figure>
+        <button class="figure-button" type="button" data-image="assets/qualitative.png" data-caption="Hierarchical segmentation · Figure 5" aria-label="Enlarge qualitative results"><img src="assets/qualitative.png" width="2364" height="1170" loading="lazy" alt="Figure 5: video-specific hierarchical segments on Charades-STA for queries about eating a sandwich, holding a cup, and putting on shoes"></button>
+        <figcaption><strong>Hierarchical segmentation on Charades-STA.</strong> Fine, intermediate, and coarse segments capture complementary temporal context for query-relevant moments within the same untrimmed video.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section citation container" id="citation">
+      <h2>Citation</h2>
+      <p>Citation information will be available soon.</p>
+    </section>
+  </main>
+
+  <footer><p><a href="https://sites.google.com/view/pai-lab/home?authuser=0">Perceptual AI Lab</a><br>GSAIM, Chung-Ang University</p></footer>
+  <dialog class="image-dialog" aria-label="Full-resolution paper figure"><div class="dialog-toolbar"><span id="image-caption"></span><button type="button" class="dialog-close" aria-label="Close image">Close ×</button></div><div class="dialog-image-wrap"><img id="dialog-image" alt=""></div></dialog>
 </body>
 </html>
