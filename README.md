@@ -1,12 +1,17 @@
-<h1 align="center">[NeurIPS 2026] TF-PRVR: Training-Free Partially Relevant Video Retrieval</h1>
+<p align="center">
+  <img src="https://img.shields.io/badge/NeurIPS-2026-635BFF?style=flat-square" alt="NeurIPS 2026">
+</p>
+
+<h1 align="center">TF-PRVR:<br>Training-Free Partially Relevant Video Retrieval</h1>
 
 <p align="center">
-  <a href="https://giyeolkim.github.io/">Giyeol Kim</a> &nbsp;
+  <a href="https://giyeolkim.github.io/">Giyeol Kim</a> &nbsp;&nbsp;&nbsp;
   <a href="https://sites.google.com/view/pai-lab/members_1/faculty?authuser=0">Chanho Eom</a><sup>&dagger;</sup>
 </p>
 
 <p align="center">
-  <a href="https://sites.google.com/view/pai-lab/home?authuser=0">Perceptual AI Lab</a>, GSAIM, Chung-Ang University
+  <a href="https://sites.google.com/view/pai-lab/home?authuser=0"><b>Perceptual AI Lab</b></a><br>
+  GSAIM, Chung-Ang University
 </p>
 
 <p align="center">
@@ -14,13 +19,22 @@
 </p>
 
 <p align="center">
-  <a href="https://perceptualai-lab.github.io/TF-PRVR/">Project Page</a> &nbsp;|&nbsp; <a>Paper (NeurIPS)</a> &nbsp;|&nbsp; <a>arXiv</a>
+  <a href="https://perceptualai-lab.github.io/TF-PRVR/"><img src="https://img.shields.io/badge/Project_Page-2563EB?style=for-the-badge" alt="Project Page"></a>
+  &nbsp;
+  <a href="https://perceptualai-lab.github.io/TF-PRVR/#demo"><img src="https://img.shields.io/badge/Demo-0891B2?style=for-the-badge" alt="Demo"></a>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Paper-Coming_Soon-64748B?style=for-the-badge" alt="Paper coming soon">
+  &nbsp;
+  <img src="https://img.shields.io/badge/arXiv-Coming_Soon-64748B?style=for-the-badge" alt="arXiv coming soon">
+</p>
+
+<p align="center"><b>Find the relevant moment. Retrieve the whole video.</b></p>
+
+<p align="center">
+  TF-PRVR retrieves untrimmed videos from natural-language queries using frozen vision-language features, adaptive temporal segments, and multi-scale relevance propagation&mdash;without task-specific training.
 </p>
 
 ---
-
-> **Find the relevant moment. Retrieve the whole video.**<br>
-> TF-PRVR retrieves untrimmed videos from natural-language queries using frozen vision-language features, adaptive temporal segments, and multi-scale relevance propagation—without task-specific training.
 
 ## Overview
 
