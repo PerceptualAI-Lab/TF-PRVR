@@ -1,0 +1,85 @@
+{
+  "purpose": "Scripted educational illustration; no model inference or measured retrieval scores.",
+  "license": "https://www.pexels.com/license/",
+  "sources": [
+    {
+      "key": "pouring",
+      "creator": "TP Motion",
+      "url": "https://www.pexels.com/video/pouring-water-on-a-glass-cup-8816380/"
+    },
+    {
+      "key": "cutting",
+      "creator": "Pressmaster",
+      "url": "https://www.pexels.com/video/cutting-vegetables-to-pieces-in-a-chopping-board-3209214/"
+    },
+    {
+      "key": "washing",
+      "creator": "MART PRODUCTION",
+      "url": "https://www.pexels.com/video/a-woman-washing-the-dishes-7641383/"
+    }
+  ],
+  "edits": {
+    "video-1.mp4": [
+      [
+        "cutting",
+        0,
+        4
+      ],
+      [
+        "pouring",
+        5,
+        10
+      ],
+      [
+        "cutting",
+        5,
+        4
+      ]
+    ],
+    "video-2.mp4": [
+      [
+        "washing",
+        1,
+        2
+      ],
+      [
+        "cutting",
+        0,
+        10
+      ],
+      [
+        "washing",
+        4,
+        6
+      ]
+    ],
+    "video-3.mp4": [
+      [
+        "pouring",
+        5,
+        7
+      ],
+      [
+        "washing",
+        10,
+        10
+      ],
+      [
+        "pouring",
+        15,
+        1
+      ]
+    ]
+  },
+  "edit_fields": [
+    "source_key",
+    "source_start_seconds",
+    "duration_seconds"
+  ],
+  "encoding": {
+    "width": 640,
+    "height": 360,
+    "fps": 24,
+    "audio": false
+  }
+}
