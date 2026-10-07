@@ -23,9 +23,9 @@
   &nbsp;
   <a href="https://perceptualai-lab.github.io/TF-PRVR/#demo"><img src="assets/links/demo.svg" height="36" alt="Demo"></a>
   &nbsp;
-  <img src="assets/links/paper.svg" height="36" alt="Paper coming soon">
+  <a href="https://arxiv.org/pdf/2610.07925"><img src="assets/links/paper.svg" height="36" alt="Paper"></a>
   &nbsp;
-  <img src="assets/links/arxiv.svg" height="36" alt="arXiv coming soon">
+  <a href="https://arxiv.org/abs/2610.07925"><img src="assets/links/arxiv.svg" height="36" alt="arXiv"></a>
 </p>
 
 <p align="center">
@@ -133,4 +133,14 @@ Omit `--annotations` for retrieval only. Rankings are saved as JSONL, and evalua
 
 ## Citation
 
-Citation information will be available soon.
+```bibtex
+@misc{kim2026tfprvr,
+  title={TF-PRVR: Training-Free Partially Relevant Video Retrieval},
+  author={Giyeol Kim and Chanho Eom},
+  year={2026},
+  eprint={2610.07925},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2610.07925}
+}
+```
