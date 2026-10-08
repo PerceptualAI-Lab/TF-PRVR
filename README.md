@@ -128,7 +128,6 @@ Omit `--annotations` for retrieval only. Rankings are saved as JSONL, and evalua
 | :--- | :--- |
 | [`model.py`](model.py) | Semantic signal, wavelet segmentation, graph construction, propagation, and scoring |
 | [`data.py`](data.py) | HDF5 feature loading and explicit query-to-video annotations |
-| [`main.py`](main.py) | Offline indexing and batched retrieval/evaluation |
 | [`requirements.txt`](requirements.txt) | Runtime and research-environment dependencies |
 
 ## Citation
@@ -144,3 +143,5 @@ Omit `--annotations` for retrieval only. Rankings are saved as JSONL, and evalua
   url={https://arxiv.org/abs/2610.07925}
 }
 ```
+
+The full code is being polished and will be released soon.
