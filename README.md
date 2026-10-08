@@ -130,7 +130,7 @@ Omit `--annotations` for retrieval only. Rankings are saved as JSONL, and evalua
 | [`data.py`](data.py) | HDF5 feature loading and explicit query-to-video annotations |
 | [`requirements.txt`](requirements.txt) | Runtime and research-environment dependencies |
 
-The code is currently being polished and will be released soon.
+The code is currently being polished. The core implementation is already available here for reference.
 
 ## Citation
 
