@@ -1,0 +1,24 @@
+{
+  "segmentation": {
+    "wavelet": "db4",
+    "threshold": 1,
+    "peak_distance": 1
+  },
+  "graph": {
+    "knn": 2,
+    "segment_knn": 2,
+    "similarity_power": 1,
+    "temporal_weight": 0,
+    "tau_scale": 0.5,
+    "inter_weight": 0.25
+  },
+  "beta": 0.3,
+  "mas": {
+    "duration_power": 2.0
+  },
+  "text": {
+    "mix": 0.1,
+    "strength": 0.75
+  },
+  "top_k": 1
+}

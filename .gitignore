@@ -1,12 +1,6 @@
 __pycache__/
 *.py[cod]
 .venv/
-.pytest_cache/
+.DS_Store
 data/
 outputs/
-cache/
-*.h5
-*.hdf5
-*.npz
-*.log
-.DS_Store
