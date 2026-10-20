@@ -88,7 +88,7 @@ Feature dimensions are inferred. Frame sequences may have different lengths and 
 
 `video_features` constructs a video's moment representations from frame features and the selected configuration. `text_features` and `correct_queries` prepare query vectors; `score_video` produces their video-level scores. The same modules are shared across all datasets.
 
-The evaluation protocol ranks validation queries against the full video gallery defined by the evaluation annotations. Query-to-video annotations determine relevance. We report **R@1, R@5, R@10, R@100**, and **SumR**, with ties resolved by lexicographic video ID order. Caption statistics are computed from training captions, excluding evaluation videos. The `top_k` configuration controls temporal score pooling, independently of the retrieval cutoffs in R@K.
+The evaluation protocol ranks validation queries against the full video gallery defined by the evaluation annotations. Query-to-video annotations determine relevance.
 
 ## Implementation
 
